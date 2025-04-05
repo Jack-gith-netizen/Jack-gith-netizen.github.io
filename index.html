@@ -1,38 +1,192 @@
-<!doctypehtml>
-<html lang=en>
-<meta charset=utf-8>
-<meta content="width=device-width,initial-scale=1" name=viewport>
-<meta content="Explore Animation by CSS and JS" name=description>
-<title>CSS Transforms,Transitions and Animations</title>
-<link href=https://fonts.googleapis.com rel=preconnect>
-<link href=https://fonts.gstatic.com rel=preconnect crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel=stylesheet>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel=stylesheet>
-<link href=styles/normalize-fwd.css rel=stylesheet>
-<link href=styles/styles.css rel=stylesheet>
-<header>
-    <nav>
-        <div class=dropdown><button class=dropdown-button onclick=toggleDropdown()>Navigation</button>
-            <div class=dropdown-content>
-                <ul>
-                    <li><a href=index.html>Home</a></ul>
-                <ul>
-                    <li><a href=#>Animation Projects from Jack</a>
-                        <ul>
-                            <li><a href=Whatisit.html>What's it</a>
-                                <li><a href=/firstanimation/browser/index.html>Angular Animation Demo a simple Project</a>
-                                    <li><a href=/anidemo/browser/index.html>More meaningful demos from Internet source</a>
-                                        <li><a href=jackPresent.html>Angular Presentation</a></ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<main>
-   
-</main>
-<footer></footer>
-<script defer src=/scripts/navigation.js></script>
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Animation by CSS and JS">
+
+    <title>CSS Transforms, Transitions, and Animations</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize-fwd.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+   
+    <header>
+        <nav>
+            <div class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown()">Navigation</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Animation Projects from Jack</a>
+                            <ul>
+                                <li><a href="Whatisit.html">What's it</a></li>
+                                <li><a href="/firstanimation/browser/index.html">Angular Animation Demo a simple Project</a></li>
+                                <li><a href="/anidemo/browser/index.html">More meaningful demos from Internet source</a></li>
+                                <li><a href="jackPresent.html">Angular Presentation</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="css-animations-reference.zip" download="css-animations-reference.zip">
+                            <span>CSS Animation Demo code from Jamie (click to download)</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+      
+
+    <main>
+        <section>
+            <h1>Facts about CSS Transforms, Transitions, and Animations</h1>
+        </section>
+
+        <div class="row">
+            <section>
+                <h2>1. CSS Transforms</h2>
+                <p>CSS transform allows you to modify an element's position, size, rotation, or shape in 2D or 3D space.
+                </p>
+                <ul>
+                    <li><strong>Move:</strong> Moves an element from its current position.</li>
+                    <li><strong>Scale:</strong> Changes the size of an element.</li>
+                    <li><strong>Rotate:</strong> Rotates an element.</li>
+                    <li><strong>Skew:</strong> Slants the element.</li>
+                    <li><strong>3D Transforms:</strong> Creates depth effects using properties like perspective.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Example</h2>
+                <style>
+                    .box1 {
+                        width: 100px;
+                        height: 100px;
+                        background-color: teal;
+                        transition: transform 3s ease;
+                    }
+
+                    .box1:hover {
+                        transform: translateX(200px) rotate(45deg) scale(1.5);
+                    }
+                </style>
+                <div class="box1"></div>
+                <p>When hovering over the box:</p>
+                <ul>
+                    <li>It moves 200px to the right (<code>translateX(200px)</code>).</li>
+                    <li>It rotates 45 degrees (<code>rotate(45deg)</code>).</li>
+                    <li>It scales by 1.5 times (<code>scale(1.5)</code>).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. CSS Transitions</h2>
+                <p>CSS transitions allow smooth property changes over time.</p>
+                <ul>
+                    <li><strong>transition-property:</strong> Specifies which CSS property will change.</li>
+                    <li><strong>transition-duration:</strong> Sets how long the transition will take.</li>
+                    <li><strong>transition-timing-function:</strong> Defines the speed curve of the transition.</li>
+                    <li><strong>transition-delay:</strong> Adds a delay before the transition starts.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Example</h2>
+                <style>
+                    .box2 {
+                        width: 100px;
+                        height: 100px;
+                        background-color: teal;
+                        transition: background-color 1s ease, transform 3s ease;
+                    }
+
+                    .box2:hover {
+                        background-color: coral;
+                        transform: rotate(180deg);
+                    }
+                </style>
+                <div class="box2"></div>
+                <p>When hovering over the box:</p>
+                <ul>
+                    <li>The background color changes to coral over 1 second.</li>
+                    <li>The element rotates by 180 degrees over 3 seconds.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. CSS Animations</h2>
+                <p>CSS animations offer more flexibility than transitions.</p>
+                <ul>
+                    <li><strong>@keyframes:</strong> Defines the keyframes of an animation.</li>
+                    <li><strong>animation-name:</strong> Specifies the animation's name.</li>
+                    <li><strong>animation-duration:</strong> Defines how long the animation lasts.</li>
+                    <li><strong>animation-timing-function:</strong> Controls the animation speed curve.</li>
+                    <li><strong>animation-iteration-count:</strong> Defines how many times the animation repeats.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Example</h2>
+                <style>
+                    @keyframes moveAndRotate {
+                        0% {
+                            transform: translateX(0) rotate(0deg);
+                            background-color: teal;
+                        }
+
+                        50% {
+                            transform: translateX(300px) rotate(180deg);
+                            background-color: coral;
+                        }
+
+                        100% {
+                            transform: translateX(0) rotate(360deg);
+                            background-color: teal;
+                        }
+                    }
+
+                    .box3 {
+                        width: 100px;
+                        height: 100px;
+                        background-color: teal;
+                        animation: moveAndRotate 4s ease-in-out infinite;
+                    }
+                </style>
+                <div class="box3"></div>
+                <p>Animation breakdown:</p>
+                <ul>
+                    <li>At 0%: The box is in its original position with a teal color.</li>
+                    <li>At 50%: It moves right, rotates 180 degrees, and changes to coral.</li>
+                    <li>At 100%: It returns to its original position and color.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Summary of Differences</h2>
+                <ul>
+                    <li><strong>Transforms:</strong> Apply 2D or 3D transformations to an element (scaling, rotating, translating).</li>
+                    <li><strong>Transitions:</strong> Smoothly animate property changes when an element's state changes.</li>
+                    <li><strong>Animations:</strong> Allow complex effects with keyframes and precise timing control.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="/scripts/navigation.js" defer></script>
 </body>
 
 </html>
